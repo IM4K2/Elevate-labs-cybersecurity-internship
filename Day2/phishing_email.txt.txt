@@ -1,0 +1,21 @@
+Sender: support-update@secure-amaz0n.com
+Receiver: studentuser@university.edu
+Subject: [Action Required] Your Amazon Account Will Be Locked
+Date: Fri, 21 Jun 2025 09:42:10 -0800
+
+Dear Customer,
+
+We have detected suspicious activity in your Amazon account.
+
+In order to protect your personal information, we will lock your account within 24 hours unless you verify your information.
+
+✅ Verify Your Account Now → Click here to resolve the issue
+
+Failure to comply will result in permanent suspension of your Amazon account and any pending orders.
+
+If you believe this was sent to you in error, please unsubscribe here.
+
+Thank you,
+Amazon Security Team
+
+Please do not reply to this automated message.

@@ -1,71 +1,76 @@
+# 🔍 Localhost Vulnerability Assessment Using Nessus Essentials
 
-# 🔍 Basic Vulnerability Scan on Personal Computer
-
-This repository documents a hands-on vulnerability assessment conducted on a personal computer using **Nessus Essentials**. It highlights how to discover, interpret, and mitigate common system vulnerabilities from a beginner-friendly standpoint.
-
----
-
-## 🧑‍💻 Project Overview
-
-Vulnerability scanning is a core activity in cybersecurity, aimed at identifying weaknesses in systems that could be exploited. In this project, a complete scan was executed on the local host machine using the **Nessus Essentials** scanner. The scan provided insights into misconfigurations, outdated services, and insecure protocols.
+This repository presents a basic vulnerability scan conducted on a personal computer using **Nessus Essentials**. The purpose of this assessment was to explore, interpret, and learn from real-world system vulnerabilities from a beginner's perspective.
 
 ---
 
-## 🎯 Objective
+## 🧑‍💻 Overview
 
-- Perform a vulnerability scan on a local computer
-- Identify and document **critical** and **high** vulnerabilities
-- Suggest beginner-level remediations
-- Understand the real-world implications of common weaknesses
+Vulnerability scanning plays a key role in strengthening system security. By identifying known weaknesses, one can proactively address them before they are exploited. In this task, a complete scan was carried out on the local machine (localhost) using the free version of Nessus Essentials to detect threats and evaluate their severity.
 
 ---
 
-## 🛠️ Tools Used
+## 🎯 Goals
 
-| Tool              | Description                                 |
-|-------------------|---------------------------------------------|
-| Nessus Essentials | Free vulnerability scanner by Tenable       |
-| Localhost         | Target system (`127.0.0.1`)                 |
-| Web Browser       | Accessed Nessus Dashboard (`https://localhost:8834`) |
-
----
-
-## 🧪 Project Steps
-
-1. Installed Nessus Essentials and registered with the free license key
-2. Created a basic network scan targeting `127.0.0.1`
-3. Launched the scan and monitored progress (took ~50 minutes)
-4. Analyzed the scan report to filter important vulnerabilities
-5. Verified each issue with official CVE documentation
-6. Suggested beginner-level mitigations for identified vulnerabilities
-7. Documented findings and included relevant screenshots in the report
+- Run a basic vulnerability scan on the local PC
+- Detect and log significant (high/critical) vulnerabilities
+- Recommend simple mitigation strategies
+- Build familiarity with vulnerability management tools
 
 ---
 
-## 📋 Key Findings (Summary)
+## 🛠️ Tools & Environment
 
-| Vulnerability                        | Severity | CVE ID         | CVSS Score | Suggested Fix                        |
-|-------------------------------------|----------|----------------|------------|--------------------------------------|
-| SMBv1 Enabled                       | Critical | CVE-2017-0144  | 9.3        | Disable SMBv1 protocol in Windows    |
-| Outdated OpenSSH Server            | High     | CVE-2023-48795 | 8.5        | Update OpenSSH to latest version     |
-| SSL Certificate Expired            | Medium   | CVE-2022-3859  | 6.8        | Renew or replace expired certificate |
-| HTTP TRACE Method Enabled          | Medium   | CVE-2004-2320  | 5.8        | Disable TRACE method on the server   |
-| Open Port Without Service Firewall | Info     | -              | -          | Restrict unused open ports           |
+| Tool              | Purpose                                      |
+|-------------------|----------------------------------------------|
+| Nessus Essentials | Free scanner from Tenable used for scanning  |
+| 127.0.0.1         | Target IP (represents the local system)      |
+| Web Browser       | Used to access the Nessus interface (`https://santhohex:8834`) |
 
 ---
 
+## 🧪 Procedure
 
-## 🧠 Lessons Learned
-
-- Legacy protocols like SMBv1 pose severe threats and should be disabled
-- Expired certificates and TRACE methods are common, easy-to-overlook issues
-- Even localhost systems can expose real vulnerabilities worth addressing
-- Vulnerability assessment teaches both technical and security thinking skills
+1. Installed Nessus Essentials and completed the free license activation.
+2. Set up a new scan profile aimed at the localhost IP (`127.0.0.1`).
+3. Initiated a basic scan of the system.
+4. Monitored the scan, which took approximately 45 minutes to complete.
+5. Reviewed the scan findings and highlighted major issues.
+6. Investigated each vulnerability to understand its risk and resolution.
+7. Compiled a summary report with fixes and captured screenshots.
 
 ---
 
-## 🔐 Disclaimer
+## 📋 Summary of Detected Vulnerabilities
 
-This scan was run on a personal, non-production system for educational purposes only. The techniques and results may vary based on the system configuration, OS version, and installed software.
+| Vulnerability                   | Risk Level | CVE Reference   | CVSS Rating | Suggested Action                    |
+|--------------------------------|------------|------------------|-------------|-------------------------------------|
+| SMB Signing Disabled           | High       | CVE-2017-0143    | 8.1         | Enable mandatory SMB signing        |
+| Firefox Browser Outdated       | Medium     | CVE-2023-5381    | 6.5         | Update Firefox to the latest build  |
+| Weak SSL/TLS Cipher Support    | Medium     | CVE-2016-2183    | 5.9         | Disable legacy SSL cipher suites    |
+| ICMP Timestamp Disclosure      | Informational | -            | -           | Block timestamp replies via firewall |
+
+---
+
+## 📁 Project Contents
+
+- `/report/`: Contains a detailed summary of the scan and analysis
+- `/screenshots/`: Includes visuals of vulnerabilities and scan output
+- `README.md`: Documentation of project process and key learnings
+
+---
+
+## 🧠 Key Takeaways
+
+- Even a standalone personal machine can present exploitable vulnerabilities.
+- Outdated applications and misconfigured protocols pose real security threats.
+- Tools like Nessus offer valuable insights and learning opportunities for beginners.
+- Security is a continuous process — regular scans and updates are essential.
+
+---
+
+## ⚠️ Disclaimer
+
+The assessment was carried out solely for educational and training purposes on a personal, non-production system. Vulnerability behavior may differ based on system settings and installed software.
 
 ---
